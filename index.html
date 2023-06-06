@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+</head>
+<body>
+    <img id="cloud1" class="cloud" src="./animation/Cloud 1.svg">
+    <img id="cloud5" class="cloud" src="./animation/Cloud 1.svg">
+    <img id="cloud2" class="cloud" src="./animation/Cloud 1.svg">
+    <img id="cloud1" class="cloud" src="./animation/Cloud 2.svg">
+    <img id="cloud5" class="cloud" src="./animation/Cloud 2.svg">
+    <img id="cloud2" class="cloud" src="./animation/Cloud 2.svg">
+    <img id="cloud4" class="cloud" src="./animation/Cloud 3.svg">
+    <img id="cloud3" class="cloud" src="./animation/Cloud 3.svg">
+    <img id="cloud3" class="cloud" src="./animation/Cloud 3.svg">
+    <img id="cloud2" class="cloud" src="./animation/Cloud 4.svg">
+    <img id="cloud4" class="cloud" src="./animation/Cloud 4.svg">
+    <img id="cloud1" class="cloud" src="./animation/Cloud 4.svg">
+    <img id="cloud3" class="cloud" src="./animation/Cloud 5.svg">
+    <img id="cloud4" class="cloud" src="./animation/Cloud 5.svg">
+    <img id="cloud5" class="cloud" src="./animation/Cloud 5.svg">
+    <img src="./src/logo.svg" class="logo">
+    <div class="heading">
+        <div class="form-block">
+            <form id="form">
+                <div class="input-container" id="input-container">
+                    <input onsubmit="checkWeather()" id="weather-search" type="text" name="city_for_search" autocomplete="off" class="text-input">
+                    <label for="weather-search" class="label">Введите город:</label>
+                    <button onclick="checkWeather()" class="search-button"><i class="icon"><img src="./src/search (1).png"></i></button>
+                </div>    
+            </form>
+            
+
+        </div>
+    </div>
+    <div class="container" id="container">
+        <div class="main-info" id="main-tab">
+            <p class="city"></p>
+            <div class="line">
+                <img id="main-icon" src="">
+                <p class="degrees"></p>
+                
+            </div>
+            
+            <p class="status"></p>
+            <p class="min-max-measure">Макс: <span class="max_temp"></span>, Мин.: <span class="min_temp"></span></p>
+            <p class="sunrise-set"><img src="./icons/sunrise.svg" class="sunrise-ico">Восход: <span class="sunrise"></span></p>
+            <p class="sunrise-set"><img src="./icons/sunset.svg" class="sunset-ico">Закат: <span class="sunset"></span></p>
+            
+        </div>        
+        <div class="more-info">
+            <p class="humidity-heading">Влажность:<br><span class="humidity"></span></p>
+            <p class="pressure-heading">Давление:<br><span class="pressure"></span></p>
+            <p class="windspeed-heading">Ветер:<br><span class="windspeed"></span></p>
+            <p class="visibility-heading">Видимость:<br><span class="visibility"></span></p>
+        </div>
+        <div class="forecast">
+            <p class="title">Прогноз</p>
+            <ul class="day-list">
+                <p class="date" id="date"></p>
+                <li class="day">
+                    <div class="inline-temp">
+                        <p class="time">6:00</p>
+                        <p class="tempr" id="6:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">9:00</p>
+                        <p class="tempr" id="9:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">12:00</p>
+                        <p class="tempr" id="12:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">15:00</p>
+                        <p class="tempr" id="15:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">18:00</p>
+                        <p class="tempr" id="18:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">21:00</p>
+                        <p class="tempr" id="21:00-temp"></p>
+                    </div>      
+                </li>
+                <li><p class="date"></p></li>
+                <li class="day">
+                    <div class="inline-temp">
+                        <p class="time">6:00</p>
+                        <p class="tempr" id="6:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">9:00</p>
+                        <p class="tempr" id="9:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">12:00</p>
+                        <p class="tempr" id="12:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">15:00</p>
+                        <p class="tempr" id="15:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">18:00</p>
+                        <p class="tempr" id="18:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">21:00</p>
+                        <p class="tempr" id="21:00-temp"></p>
+                    </div>      
+                </li>
+                <p class="date" id="date"></p>
+                <li class="day">
+                    <div class="inline-temp">
+                        <p class="time">6:00</p>
+                        <p class="tempr" id="6:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">9:00</p>
+                        <p class="tempr" id="9:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">12:00</p>
+                        <p class="tempr" id="12:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">15:00</p>
+                        <p class="tempr" id="15:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">18:00</p>
+                        <p class="tempr" id="18:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">21:00</p>
+                        <p class="tempr" id="21:00-temp"></p>
+                    </div>      
+                </li>
+                <p class="date" id="date"></p>
+                <li class="day">
+                    <div class="inline-temp">
+                        <p class="time">6:00</p>
+                        <p class="tempr" id="6:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">9:00</p>
+                        <p class="tempr" id="9:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">12:00</p>
+                        <p class="tempr" id="12:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">15:00</p>
+                        <p class="tempr" id="15:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">18:00</p>
+                        <p class="tempr" id="18:00-temp"></p>
+                    </div>
+                    <div class="inline-temp">
+                        <p class="time">21:00</p>
+                        <p class="tempr" id="21:00-temp"></p>
+                    </div>      
+                </li>
+            </ul>   
+                
+        <div class="pop-up-container">
+            <div class="pop-up-body">
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="animation.js"></script>    
+</body>
+</html>
